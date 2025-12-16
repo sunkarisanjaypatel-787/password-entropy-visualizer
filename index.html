@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Password Strength Visualizer">
+    <meta property="og:description" content="A real-time password security tool with crack-time estimation. Built with Vanilla JS & Regex.">
+    <meta property="og:image" content="https://your-username.github.io/repo-name/preview-image.png">
+    <meta property="og:url" content="https://your-username.github.io/repo-name/">
+    <meta name="author" content="Your Name">
+    <title>Password Checker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <div class="background-blobs"></div> <div class="container glass-effect">
+        <h2>Security Check</h2>
+        <p class="subtitle">How stroung is your password ?</p>
+        
+    
+        <div class="input-group">
+        <input type="password" id="passwordInput" placeholder="Type your password...">
+        <i class="fa-solid fa-eye" id="togglePassword"></i>
+        
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="strengthBar"></div>
+    </div>
+
+    <div id="strengthMessage" class="strength-pill">
+    Strength: <span id="strengthText">N/A</span> 
+    <span id="scoreContainer" style="float: right;">
+        Score: <span id="scoreCounter">0</span>/100
+    </span>
+</div>
+<div class="crack-time-container">
+    <p id="securityAdvice" class="security-advice">Start typing...</p>
+    <p class="crack-time">Time to crack: <span id="timeToCrack">0 seconds</span></p>
+</div>
+        <ul class="requirement-list">
+            <li id="req-length"><i class="fa-solid fa-circle"></i> 8+ Characters</li>
+            <li id="req-upper"><i class="fa-solid fa-circle"></i> Uppercase Letter</li>
+            <li id="req-lower"><i class="fa-solid fa-circle"></i> Lowercase Letter</li>
+            <li id="req-number"><i class="fa-solid fa-circle"></i> Number</li>
+            <li id="req-symbol"><i class="fa-solid fa-circle"></i> Symbol</li>
+        </ul>
+    </div>
+    <footer style="position: absolute; bottom: 10px; text-align: center; width: 100%; color: rgba(255,255,255,0.7); font-size: 0.8rem;">
+    Built by <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BuLSPeydmRr69y6Jso1DBUA%3D%3D" style="color: #fff; text-decoration: none; font-weight: bold;">Sanjay Patel</a> |
+    <a href="LINK_TO_YOUR_GITHUB" style="color: #fff; text-decoration: none;">View Code</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

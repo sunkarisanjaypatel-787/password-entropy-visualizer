@@ -1,0 +1,218 @@
+/* --- AESTHETIC RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Modern Font */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Animated Pastel Gradient Background */
+    background: linear-gradient(-45deg, #ee7752, #e55075, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    overflow: hidden;
+}
+
+/* Background Animation Keyframes */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- GLASSMORPHISM CARD --- */
+.container {
+    background: rgba(255, 255, 255, 0.25); /* Semi-transparent white */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Soft shadow */
+    backdrop-filter: blur(8px); /* The "Frosted Glass" blur */
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Thin white border */
+    padding: 2.5rem;
+    width: 380px;
+    color: white;
+}
+@media (max-width: 480px) {
+    .container {
+        width: 90%; /* prevent overflow on small screens */
+        padding: 1.5rem;
+    }
+}
+
+h2 {
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+/* --- INPUT FIELD --- */
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    border: none;
+    border-radius: 50px; /* Pill shape */
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    transform: scale(1.02); /* Slight zoom on focus */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Eye Icon */
+#togglePassword {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s;
+}
+#togglePassword:hover {
+    color: #333;
+}
+
+
+/* --- STRENGTH PILL --- */
+.strength-pill {
+    text-align: center;
+    padding: 10px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    background: rgba(244, 242, 242, 0.2);
+    transition: all 0.4s ease;
+    backdrop-filter: blur(5px);
+}
+.crack-time-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.crack-time {
+    font-size: 0.85rem;
+    color: #fff;
+    margin-top: 5px;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+#timeToCrack {
+    font-weight: 700;
+    color: #feca57; /* Highlight color */
+}
+/* --- LIST ITEMS --- */
+.requirement-list {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.requirement-list li {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    opacity: 0.8; /* Slightly faded normally */
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.requirement-list li i {
+    margin-right: 10px;
+    font-size: 0.7rem;
+}
+
+/* --- DYNAMIC STATES (Colors) --- */
+
+/* Valid Checkmarks */
+.valid {
+    opacity: 1 !important; /* Make it bright */
+    color: #fff; /* White text for contrast against glass */
+    font-weight: 500;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5); /* Glowing text */
+}
+.valid i {
+    color: #69f0ae; /* Bright Mint Green Icon */
+}
+
+/* Invalid X marks */
+.invalid i {
+    color: rgba(255, 255, 255, 0.5); 
+}
+
+/* Strength Levels (Pastel Colors) */
+.weak {
+    background-color: rgba(255, 107, 107, 0.8); /* Pastel Red */
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.5);
+    color: white;
+}
+
+.medium {
+    background-color: rgba(254, 202, 87, 0.8); /* Pastel Yellow/Gold */
+    box-shadow: 0 0 15px rgba(254, 202, 87, 0.5);
+    color: #333; /* Dark text for readability on yellow */
+}
+
+.strong {
+    background-color: rgba(29, 209, 161, 0.8); /* Pastel Teal */
+    box-shadow: 0 0 15px rgba(29, 209, 161, 0.5);
+    color: white;
+}
+/* --- PROGRESS BAR --- */
+.progress-container {
+    width: 100%;
+    height: 6px; /* Slim aesthetic bar */
+    background-color: rgba(255, 255, 255, 0.3); /* Glassy track */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden; /* Ensures the fill doesn't spill out of rounded corners */
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%; /* Starts empty */
+    border-radius: 10px;
+    transition: width 0.4s ease, background-color 0.4s ease; /* Smooth animation */
+}
+
+/* --- Bar Colors (Matching the Text Pill) --- */
+.bar-weak {
+    background-color: #ff6b6b; /* Pastel Red */
+    box-shadow: 0 0 10px #ff6b6b; /* Glowing effect */
+}
+
+.bar-medium {
+    background-color: #feca57; /* Pastel Yellow */
+    box-shadow: 0 0 10px #feca57;
+}
+
+.bar-strong {
+    background-color: #1dd1a1; /* Pastel Teal */
+    box-shadow: 0 0 10px #1dd1a1;
+}
