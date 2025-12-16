@@ -42,7 +42,7 @@ Unlike basic checkers that just count characters, this tool calculates **informa
 | **HTML5** | Semantic structure and accessibility tags. |
 | **CSS3** | Glassmorphism, CSS Variables, Flexbox, Keyframe Animations. |
 | **JavaScript (ES6)** | DOM manipulation, Regex validation, Entropy math logic. |
-| **FontAwesome** | UI Icons (Eye toggle, Checkmarks, Copy button). |
+| **FontAwesome** | UI Icons (Eye toggle, Checkmarks). |
 
 ---
 
