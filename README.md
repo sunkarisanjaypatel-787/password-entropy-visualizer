@@ -48,7 +48,8 @@ Unlike basic checkers that just count characters, this tool calculates **informa
 
 ## 🧮 How It Works ( The Logic)
 
-The core logic resides in `script.js`. It calculates the size of the character pool and determines combinations.
+
+The core logic resides in `[script.js](https://github.com/user-attachments/files/24195551/script.js)'. It calculates the size of the character pool and determines combinations.
 
 **The Formula:**
 $$\text{Combinations} = \text{Pool Size}^{\text{Length}}$$
