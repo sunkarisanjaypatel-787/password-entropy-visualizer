@@ -11,13 +11,14 @@
 
 ## 📸 Screenshots
 
-App Interface<img width="1710" height="1112" alt="Screenshot 2025-12-16 at 19 48 58" src="https://github.com/user-attachments/assets/3d767e1f-aadf-417a-bfb3-3eb8bd79ef8d"/>
+App Interface<img width="1710" height="1112" alt="Screenshot 2025-12-16 at 20 49 18" src="https://github.com/user-attachments/assets/75aa24d3-41dd-453f-986a-327138378b8f" />
 
 
 
 ---
 
 ## 🚀 Key Features
+
 
 ### 1. 🧠 Real-Time Entropy Calculation
 Unlike basic checkers that just count characters, this tool calculates **information entropy** to estimate:
