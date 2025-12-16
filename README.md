@@ -11,7 +11,7 @@
 
 ## 📸 Screenshots
 
-App Interface<img width="1710" height="1112" alt="Screenshot 2025-12-16 at 20 49 18" src="https://github.com/user-attachments/assets/75aa24d3-41dd-453f-986a-327138378b8f" />
+App Interface <img width="1710" height="1112" alt="Screenshot 2025-12-16 at 20 49 18" src="https://github.com/user-attachments/assets/75aa24d3-41dd-453f-986a-327138378b8f"/>
 
 
 
