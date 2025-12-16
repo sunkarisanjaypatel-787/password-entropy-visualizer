@@ -5,7 +5,7 @@
 
 **A gamified, real-time password security analysis tool.** This project visualizes password strength using mathematical entropy logic, providing users with instant feedback on "crack time," complexity, and overall security scores.
 
-🔗 **[Live Demo](https://sunkarisanjaypatel-787.github.io/password-entropy-visualizer/))**
+🔗 **[Live Demo]((https://sunkarisanjaypatel-787.github.io/password-entropy-visualizer/))**
 
 ---
 
