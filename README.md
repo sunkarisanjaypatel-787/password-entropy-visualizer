@@ -1,4 +1,4 @@
-<img width="1710" height="1112" alt="Screenshot 2025-12-16 at 19 48 58" src="https://github.com/user-attachments/assets/3d767e1f-aadf-417a-bfb3-3eb8bd79ef8d" /># 🛡️ Password Entropy Visualizer
+# 🛡️ Password Entropy Visualizer
 
 ![Project Status](https://img.shields.io/badge/Status-Completed-success)
 ![License](https://img.shields.io/badge/License-MIT-blue)
@@ -11,7 +11,7 @@
 
 ## 📸 Screenshots
 
-![App Interface]!([website_interface.png…])
+![App Interface]!(<img width="1710" height="1112" alt="Screenshot 2025-12-16 at 19 48 58" src="https://github.com/user-attachments/assets/3d767e1f-aadf-417a-bfb3-3eb8bd79ef8d" />)
 
 
 
