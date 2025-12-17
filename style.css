@@ -1,9 +1,11 @@
-/* --- AESTHETIC RESET --- */
+/* =========================================
+   1. GLOBAL RESET & TYPOGRAPHY
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Modern Font */
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -11,35 +13,40 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* Animated Pastel Gradient Background */
+    overflow: hidden;
+    /* Animated Gradient Background */
     background: linear-gradient(-45deg, #ee7752, #e55075, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
-    overflow: hidden;
 }
 
-/* Background Animation Keyframes */
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* --- GLASSMORPHISM CARD --- */
+/* =========================================
+   2. GLASSMORPHISM CONTAINER
+   ========================================= */
 .container {
-    background: rgba(255, 255, 255, 0.25); /* Semi-transparent white */
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Soft shadow */
-    backdrop-filter: blur(8px); /* The "Frosted Glass" blur */
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.18); /* Thin white border */
+    border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 2.5rem;
     width: 380px;
     color: white;
+    position: relative;
+    z-index: 1;
 }
+
+/* Responsive adjustments for mobile */
 @media (max-width: 480px) {
     .container {
-        width: 90%; /* prevent overflow on small screens */
+        width: 90%;
         padding: 1.5rem;
     }
 }
@@ -59,7 +66,9 @@ h2 {
     opacity: 0.9;
 }
 
-/* --- INPUT FIELD --- */
+/* =========================================
+   3. FORM ELEMENTS (INPUTS & ICONS)
+   ========================================= */
 .input-group {
     position: relative;
     margin-bottom: 1.5rem;
@@ -69,21 +78,20 @@ input {
     width: 100%;
     padding: 15px 50px 15px 20px;
     border: none;
-    border-radius: 50px; /* Pill shape */
+    border-radius: 50px;
     background: rgba(255, 255, 255, 0.9);
     color: #333;
     font-size: 1rem;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     outline: none;
-    transition: 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus {
-    transform: scale(1.02); /* Slight zoom on focus */
+    transform: scale(1.02);
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-/* Eye Icon */
 #togglePassword {
     position: absolute;
     right: 20px;
@@ -93,12 +101,30 @@ input:focus {
     color: #888;
     transition: color 0.3s;
 }
+
 #togglePassword:hover {
     color: #333;
 }
 
+/* =========================================
+   4. PROGRESS BAR & STRENGTH INDICATORS
+   ========================================= */
+.progress-container {
+    width: 100%;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
 
-/* --- STRENGTH PILL --- */
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.4s ease, background-color 0.4s ease;
+}
+
 .strength-pill {
     text-align: center;
     padding: 10px;
@@ -108,9 +134,32 @@ input:focus {
     letter-spacing: 0.5px;
     margin-bottom: 20px;
     background: rgba(244, 242, 242, 0.2);
-    transition: all 0.4s ease;
     backdrop-filter: blur(5px);
+    transition: all 0.4s ease;
 }
+
+/* Strength Colors */
+.bar-weak, .weak {
+    background-color: rgba(255, 107, 107, 0.8); /* Pastel Red */
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+    color: #fff;
+}
+
+.bar-medium, .medium {
+    background-color: rgba(254, 202, 87, 0.8); /* Pastel Yellow */
+    box-shadow: 0 0 10px rgba(254, 202, 87, 0.5);
+    color: #333;
+}
+
+.bar-strong, .strong {
+    background-color: rgba(29, 209, 161, 0.8); /* Pastel Teal */
+    box-shadow: 0 0 10px rgba(29, 209, 161, 0.5);
+    color: #fff;
+}
+
+/* =========================================
+   5. CRACK TIME & REQUIREMENTS LIST
+   ========================================= */
 .crack-time-container {
     text-align: center;
     margin-bottom: 15px;
@@ -126,9 +175,9 @@ input:focus {
 
 #timeToCrack {
     font-weight: 700;
-    color: #feca57; /* Highlight color */
+    color: #feca57;
 }
-/* --- LIST ITEMS --- */
+
 .requirement-list {
     list-style: none;
     padding-left: 10px;
@@ -137,7 +186,7 @@ input:focus {
 .requirement-list li {
     font-size: 0.9rem;
     margin-bottom: 8px;
-    opacity: 0.8; /* Slightly faded normally */
+    opacity: 0.8;
     transition: all 0.3s;
     display: flex;
     align-items: center;
@@ -148,71 +197,36 @@ input:focus {
     font-size: 0.7rem;
 }
 
-/* --- DYNAMIC STATES (Colors) --- */
-
-/* Valid Checkmarks */
+/* Validation Icons */
 .valid {
-    opacity: 1 !important; /* Make it bright */
-    color: #fff; /* White text for contrast against glass */
+    opacity: 1 !important;
+    color: #fff;
     font-weight: 500;
-    text-shadow: 0 0 10px rgba(255,255,255,0.5); /* Glowing text */
-}
-.valid i {
-    color: #69f0ae; /* Bright Mint Green Icon */
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
 }
 
-/* Invalid X marks */
-.invalid i {
-    color: rgba(255, 255, 255, 0.5); 
-}
+.valid i { color: #69f0ae; }
+.invalid i { color: rgba(255, 255, 255, 0.5); }
 
-/* Strength Levels (Pastel Colors) */
-.weak {
-    background-color: rgba(255, 107, 107, 0.8); /* Pastel Red */
-    box-shadow: 0 0 15px rgba(255, 107, 107, 0.5);
-    color: white;
-}
-
-.medium {
-    background-color: rgba(254, 202, 87, 0.8); /* Pastel Yellow/Gold */
-    box-shadow: 0 0 15px rgba(254, 202, 87, 0.5);
-    color: #333; /* Dark text for readability on yellow */
-}
-
-.strong {
-    background-color: rgba(29, 209, 161, 0.8); /* Pastel Teal */
-    box-shadow: 0 0 15px rgba(29, 209, 161, 0.5);
-    color: white;
-}
-/* --- PROGRESS BAR --- */
-.progress-container {
+/* =========================================
+   6. FOOTER
+   ========================================= */
+.app-footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
     width: 100%;
-    height: 6px; /* Slim aesthetic bar */
-    background-color: rgba(255, 255, 255, 0.3); /* Glassy track */
-    border-radius: 10px;
-    margin-bottom: 15px;
-    overflow: hidden; /* Ensures the fill doesn't spill out of rounded corners */
+    color: rgba(255,255,255,0.7);
+    font-size: 0.8rem;
+    z-index: 0;
 }
 
-.progress-bar {
-    height: 100%;
-    width: 0%; /* Starts empty */
-    border-radius: 10px;
-    transition: width 0.4s ease, background-color 0.4s ease; /* Smooth animation */
+.app-footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s;
 }
 
-/* --- Bar Colors (Matching the Text Pill) --- */
-.bar-weak {
-    background-color: #ff6b6b; /* Pastel Red */
-    box-shadow: 0 0 10px #ff6b6b; /* Glowing effect */
-}
-
-.bar-medium {
-    background-color: #feca57; /* Pastel Yellow */
-    box-shadow: 0 0 10px #feca57;
-}
-
-.bar-strong {
-    background-color: #1dd1a1; /* Pastel Teal */
-    box-shadow: 0 0 10px #1dd1a1;
+.app-footer a:hover {
+    opacity: 0.8;
 }
